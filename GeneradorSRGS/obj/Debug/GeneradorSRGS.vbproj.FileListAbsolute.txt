@@ -1,0 +1,13 @@
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\bin\Debug\GeneradorSRGS.exe.config
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\bin\Debug\GeneradorSRGS.exe
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\bin\Debug\GeneradorSRGS.pdb
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\bin\Debug\GeneradorSRGS.xml
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.vbprojAssemblyReference.cache
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.FrmAdministrarArchivos.resources
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.FrmInicio.resources
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.Resources.resources
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.vbproj.GenerateResource.cache
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.vbproj.CoreCompileInputs.cache
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.exe
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.xml
+C:\Users\marce\source\repos\GeneradorSRGS\GeneradorSRGS\obj\Debug\GeneradorSRGS.pdb
