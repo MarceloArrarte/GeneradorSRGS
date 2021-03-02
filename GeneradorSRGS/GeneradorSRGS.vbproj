@@ -89,6 +89,7 @@
       <DependentUpon>FrmInicio.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MetodosExtension.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

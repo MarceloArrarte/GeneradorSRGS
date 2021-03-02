@@ -4,6 +4,7 @@ Public Class FrmInicio
     Private _editandoDatosArchivo As Boolean = False
     Private _archivoActual As DocumentoSrgs
 
+#Region "Gestión de archivos"
     Private Property EditandoDatosArchivo As Boolean
         Get
             Return _editandoDatosArchivo
@@ -46,10 +47,6 @@ Public Class FrmInicio
         End Set
     End Property
 
-    Private Sub FrmInicio_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        ActiveControl = Nothing
-    End Sub
-
     Private Sub btnEditarDatosArchivo_Click(sender As Object, e As EventArgs) Handles btnEditarDatosArchivo.Click
         EditandoDatosArchivo = True
     End Sub
@@ -84,5 +81,62 @@ Public Class FrmInicio
         If frm.ShowDialog() = DialogResult.OK Then
             ArchivoActual = frm.ArchivoActual
         End If
+    End Sub
+#End Region
+
+    Private Sub FrmInicio_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        ActiveControl = Nothing
+    End Sub
+
+    Private Sub txtIDRegla_TextChanged(sender As Object, e As EventArgs) Handles txtIDRegla.TextChanged
+        If treeResumenRegla.Nodes.Count = 0 Then
+            treeResumenRegla.Nodes.Add("")
+        End If
+
+        treeResumenRegla.Nodes(0).Text = txtIDRegla.Text
+    End Sub
+
+    Private Sub btnAgregarFrase_Click(sender As Object, e As EventArgs) Handles btnAgregarFrase.Click
+        If treeResumenRegla.Nodes.Count = 0 Then
+            MsgBox("Debe especificar el ID de la regla primero.", MsgBoxStyle.Critical, "ID de regla faltante.")
+            Return
+        End If
+
+        If treeResumenRegla.SelectedNode Is Nothing Then
+            MsgBox("Debe seleccionar el nodo al cual se agregará la frase.", MsgBoxStyle.Critical, "Nodo no seleccionado")
+            Return
+        End If
+
+        Dim minRepeticiones, maxRepeticiones As Integer
+        If radRepeticionesPersonalizado.Checked And
+            (Not Integer.TryParse(txtMinRepeticiones.Text, minRepeticiones) Or
+            Not Integer.TryParse(txtMaxRepeticiones.Text, maxRepeticiones)) Then
+
+            MsgBox("Para un rango de repeticiones personalizado, ambos límites deben ser números enteros no negativos.", MsgBoxStyle.Critical, "Rango de repeticiones inválido.")
+            Return
+        End If
+
+        If minRepeticiones > maxRepeticiones Then
+            minRepeticiones = txtMaxRepeticiones.Text
+            maxRepeticiones = txtMinRepeticiones.Text
+        End If
+
+        Dim tokenSrgs As New SrgsToken(txtNuevaFrase.Text)
+        Dim especificaPronunciacion As Boolean = txtPronunciacion.Text.Trim <> ""
+        If especificaPronunciacion Then
+            tokenSrgs.Pronunciation = txtPronunciacion.Text
+        End If
+        Dim itemSrgs As New SrgsItem(tokenSrgs)
+
+        Select Case True
+            Case radRepeticionesOpcional.Checked
+                itemSrgs.SetRepeat(0, 1)
+            Case radRepeticionesPersonalizado.Checked
+                itemSrgs.SetRepeat(minRepeticiones, maxRepeticiones)
+        End Select
+
+        Dim nodoFrase As New TreeNode(itemSrgs.VistaPreviaTreeView) With {.Tag = itemSrgs}
+        treeResumenRegla.SelectedNode.Nodes.Add(nodoFrase)
+        nodoFrase.EnsureVisible()
     End Sub
 End Class
