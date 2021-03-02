@@ -107,6 +107,11 @@ Public Class FrmInicio
             Return
         End If
 
+        If txtNuevaFrase.Text.Trim = "" Then
+            MsgBox("No se ingresó ninguna frase.", MsgBoxStyle.Critical, "Frase faltante")
+            Return
+        End If
+
         Dim minRepeticiones, maxRepeticiones As Integer
         If radRepeticionesPersonalizado.Checked And
             (Not Integer.TryParse(txtMinRepeticiones.Text, minRepeticiones) Or
@@ -138,5 +143,55 @@ Public Class FrmInicio
         Dim nodoFrase As New TreeNode(itemSrgs.VistaPreviaTreeView) With {.Tag = itemSrgs}
         treeResumenRegla.SelectedNode.Nodes.Add(nodoFrase)
         nodoFrase.EnsureVisible()
+    End Sub
+
+    Private Sub btnAgregarOneof_Click(sender As Object, e As EventArgs) Handles btnAgregarOneof.Click
+        If treeResumenRegla.Nodes.Count = 0 Then
+            MsgBox("Debe especificar el ID de la regla primero.", MsgBoxStyle.Critical, "ID de regla faltante.")
+            Return
+        End If
+
+        If treeResumenRegla.SelectedNode Is Nothing Then
+            MsgBox("Debe seleccionar el nodo al cual se agregará la frase.", MsgBoxStyle.Critical, "Nodo no seleccionado")
+            Return
+        End If
+
+        If txtOpcionesOneof.Text.Trim = "" Then
+            MsgBox("No se ingresó ninguna opción.", MsgBoxStyle.Critical, "Opciones faltantes")
+            Return
+        End If
+
+        Dim minRepeticiones, maxRepeticiones As Integer
+        If radRepeticionesPersonalizado.Checked And
+            (Not Integer.TryParse(txtMinRepeticiones.Text, minRepeticiones) Or
+            Not Integer.TryParse(txtMaxRepeticiones.Text, maxRepeticiones)) Then
+
+            MsgBox("Para un rango de repeticiones personalizado, ambos límites deben ser números enteros no negativos.", MsgBoxStyle.Critical, "Rango de repeticiones inválido.")
+            Return
+        End If
+
+        If minRepeticiones > maxRepeticiones Then
+            minRepeticiones = txtMaxRepeticiones.Text
+            maxRepeticiones = txtMinRepeticiones.Text
+        End If
+
+        Dim lineas() As String = txtOpcionesOneof.Text.Split(vbNewLine)
+        Dim items(lineas.Length - 1) As SrgsItem
+        For i As Integer = 0 To lineas.Length - 1
+            items(i) = New SrgsItem(lineas(i))
+        Next
+
+        Dim oneof As New SrgsOneOf(items)
+        Dim nodoOneof As New TreeNode(oneof.VistaPreviaTreeView) With {.Tag = oneof}
+
+        For Each i As SrgsItem In oneof.Items
+            Dim opcion As SrgsText = CType(i.Elements(0), SrgsText)
+            Dim nodoOpcion As New TreeNode(opcion.Text) With {.Tag = opcion}
+            nodoOneof.Nodes.Add(nodoOpcion)
+        Next
+
+        treeResumenRegla.Nodes.Add(nodoOneof)
+        nodoOneof.EnsureVisible()
+        nodoOneof.Expand()
     End Sub
 End Class

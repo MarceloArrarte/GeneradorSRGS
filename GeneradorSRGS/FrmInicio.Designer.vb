@@ -44,47 +44,47 @@ Partial Class FrmInicio
         Me.tabXML = New System.Windows.Forms.TabPage()
         Me.txtVistaXML = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnGuardarRegla = New System.Windows.Forms.Button()
+        Me.btnEliminarItemRegla = New System.Windows.Forms.Button()
+        Me.btnModificarItemRegla = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtMaxRepeticiones = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtMinRepeticiones = New System.Windows.Forms.TextBox()
+        Me.radRepeticionesPersonalizado = New System.Windows.Forms.RadioButton()
+        Me.radRepeticionesOpcional = New System.Windows.Forms.RadioButton()
+        Me.radRepeticionesUnaVez = New System.Windows.Forms.RadioButton()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.tabItem = New System.Windows.Forms.TabPage()
+        Me.btnAgregarFrase = New System.Windows.Forms.Button()
         Me.txtPronunciacion = New System.Windows.Forms.TextBox()
         Me.txtNuevaFrase = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.tabOneOf = New System.Windows.Forms.TabPage()
+        Me.btnAgregarOneof = New System.Windows.Forms.Button()
+        Me.txtOpcionesOneof = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.tabRuleRef = New System.Windows.Forms.TabPage()
+        Me.btnAgregarReferencia = New System.Windows.Forms.Button()
+        Me.cbxReglaReferenciada = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.treeResumenRegla = New System.Windows.Forms.TreeView()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtIDRegla = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtOpcionesOneof = New System.Windows.Forms.TextBox()
-        Me.btnAgregarOneof = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.cbxReglaReferenciada = New System.Windows.Forms.ComboBox()
-        Me.btnAgregarReferencia = New System.Windows.Forms.Button()
-        Me.btnAgregarFrase = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.radRepeticionesUnaVez = New System.Windows.Forms.RadioButton()
-        Me.radRepeticionesOpcional = New System.Windows.Forms.RadioButton()
-        Me.radRepeticionesPersonalizado = New System.Windows.Forms.RadioButton()
-        Me.txtMinRepeticiones = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtMaxRepeticiones = New System.Windows.Forms.TextBox()
-        Me.btnModificarItemRegla = New System.Windows.Forms.Button()
-        Me.btnEliminarItemRegla = New System.Windows.Forms.Button()
-        Me.btnGuardarRegla = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.tabNodos.SuspendLayout()
         Me.tabXML.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         Me.tabItem.SuspendLayout()
         Me.tabOneOf.SuspendLayout()
         Me.tabRuleRef.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -344,6 +344,116 @@ Partial Class FrmInicio
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Nueva regla"
         '
+        'btnGuardarRegla
+        '
+        Me.btnGuardarRegla.Location = New System.Drawing.Point(355, 339)
+        Me.btnGuardarRegla.Name = "btnGuardarRegla"
+        Me.btnGuardarRegla.Size = New System.Drawing.Size(93, 23)
+        Me.btnGuardarRegla.TabIndex = 15
+        Me.btnGuardarRegla.Text = "Guardar regla"
+        Me.btnGuardarRegla.UseVisualStyleBackColor = True
+        '
+        'btnEliminarItemRegla
+        '
+        Me.btnEliminarItemRegla.Location = New System.Drawing.Point(355, 284)
+        Me.btnEliminarItemRegla.Name = "btnEliminarItemRegla"
+        Me.btnEliminarItemRegla.Size = New System.Drawing.Size(93, 23)
+        Me.btnEliminarItemRegla.TabIndex = 14
+        Me.btnEliminarItemRegla.Text = "Eliminar item"
+        Me.btnEliminarItemRegla.UseVisualStyleBackColor = True
+        '
+        'btnModificarItemRegla
+        '
+        Me.btnModificarItemRegla.Location = New System.Drawing.Point(255, 284)
+        Me.btnModificarItemRegla.Name = "btnModificarItemRegla"
+        Me.btnModificarItemRegla.Size = New System.Drawing.Size(93, 23)
+        Me.btnModificarItemRegla.TabIndex = 13
+        Me.btnModificarItemRegla.Text = "Modificar item"
+        Me.btnModificarItemRegla.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.txtMaxRepeticiones)
+        Me.GroupBox3.Controls.Add(Me.Label10)
+        Me.GroupBox3.Controls.Add(Me.txtMinRepeticiones)
+        Me.GroupBox3.Controls.Add(Me.radRepeticionesPersonalizado)
+        Me.GroupBox3.Controls.Add(Me.radRepeticionesOpcional)
+        Me.GroupBox3.Controls.Add(Me.radRepeticionesUnaVez)
+        Me.GroupBox3.Location = New System.Drawing.Point(18, 277)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(190, 90)
+        Me.GroupBox3.TabIndex = 12
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Repeticiones"
+        '
+        'txtMaxRepeticiones
+        '
+        Me.txtMaxRepeticiones.Location = New System.Drawing.Point(153, 64)
+        Me.txtMaxRepeticiones.Name = "txtMaxRepeticiones"
+        Me.txtMaxRepeticiones.ReadOnly = True
+        Me.txtMaxRepeticiones.Size = New System.Drawing.Size(29, 20)
+        Me.txtMaxRepeticiones.TabIndex = 5
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(143, 67)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(10, 13)
+        Me.Label10.TabIndex = 4
+        Me.Label10.Text = "-"
+        '
+        'txtMinRepeticiones
+        '
+        Me.txtMinRepeticiones.Location = New System.Drawing.Point(113, 64)
+        Me.txtMinRepeticiones.Name = "txtMinRepeticiones"
+        Me.txtMinRepeticiones.ReadOnly = True
+        Me.txtMinRepeticiones.Size = New System.Drawing.Size(29, 20)
+        Me.txtMinRepeticiones.TabIndex = 3
+        '
+        'radRepeticionesPersonalizado
+        '
+        Me.radRepeticionesPersonalizado.AutoSize = True
+        Me.radRepeticionesPersonalizado.Location = New System.Drawing.Point(13, 65)
+        Me.radRepeticionesPersonalizado.Name = "radRepeticionesPersonalizado"
+        Me.radRepeticionesPersonalizado.Size = New System.Drawing.Size(94, 17)
+        Me.radRepeticionesPersonalizado.TabIndex = 2
+        Me.radRepeticionesPersonalizado.TabStop = True
+        Me.radRepeticionesPersonalizado.Text = "Personalizado:"
+        Me.radRepeticionesPersonalizado.UseVisualStyleBackColor = True
+        '
+        'radRepeticionesOpcional
+        '
+        Me.radRepeticionesOpcional.AutoSize = True
+        Me.radRepeticionesOpcional.Location = New System.Drawing.Point(13, 42)
+        Me.radRepeticionesOpcional.Name = "radRepeticionesOpcional"
+        Me.radRepeticionesOpcional.Size = New System.Drawing.Size(67, 17)
+        Me.radRepeticionesOpcional.TabIndex = 1
+        Me.radRepeticionesOpcional.TabStop = True
+        Me.radRepeticionesOpcional.Text = "Opcional"
+        Me.radRepeticionesOpcional.UseVisualStyleBackColor = True
+        '
+        'radRepeticionesUnaVez
+        '
+        Me.radRepeticionesUnaVez.AutoSize = True
+        Me.radRepeticionesUnaVez.Checked = True
+        Me.radRepeticionesUnaVez.Location = New System.Drawing.Point(13, 19)
+        Me.radRepeticionesUnaVez.Name = "radRepeticionesUnaVez"
+        Me.radRepeticionesUnaVez.Size = New System.Drawing.Size(65, 17)
+        Me.radRepeticionesUnaVez.TabIndex = 0
+        Me.radRepeticionesUnaVez.TabStop = True
+        Me.radRepeticionesUnaVez.Text = "Una vez"
+        Me.radRepeticionesUnaVez.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(15, 289)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(72, 13)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "Repeticiones:"
+        '
         'TabControl2
         '
         Me.TabControl2.Controls.Add(Me.tabItem)
@@ -369,6 +479,15 @@ Partial Class FrmInicio
         Me.tabItem.TabIndex = 1
         Me.tabItem.Text = "Frase"
         Me.tabItem.UseVisualStyleBackColor = True
+        '
+        'btnAgregarFrase
+        '
+        Me.btnAgregarFrase.Location = New System.Drawing.Point(33, 147)
+        Me.btnAgregarFrase.Name = "btnAgregarFrase"
+        Me.btnAgregarFrase.Size = New System.Drawing.Size(123, 23)
+        Me.btnAgregarFrase.TabIndex = 6
+        Me.btnAgregarFrase.Text = "Añadir frase"
+        Me.btnAgregarFrase.UseVisualStyleBackColor = True
         '
         'txtPronunciacion
         '
@@ -414,6 +533,33 @@ Partial Class FrmInicio
         Me.tabOneOf.Text = "Múltiple opción"
         Me.tabOneOf.UseVisualStyleBackColor = True
         '
+        'btnAgregarOneof
+        '
+        Me.btnAgregarOneof.Location = New System.Drawing.Point(33, 147)
+        Me.btnAgregarOneof.Name = "btnAgregarOneof"
+        Me.btnAgregarOneof.Size = New System.Drawing.Size(123, 23)
+        Me.btnAgregarOneof.TabIndex = 5
+        Me.btnAgregarOneof.Text = "Añadir múltiple opción"
+        Me.btnAgregarOneof.UseVisualStyleBackColor = True
+        '
+        'txtOpcionesOneof
+        '
+        Me.txtOpcionesOneof.Location = New System.Drawing.Point(10, 30)
+        Me.txtOpcionesOneof.Multiline = True
+        Me.txtOpcionesOneof.Name = "txtOpcionesOneof"
+        Me.txtOpcionesOneof.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtOpcionesOneof.Size = New System.Drawing.Size(167, 108)
+        Me.txtOpcionesOneof.TabIndex = 1
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(7, 14)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(124, 13)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "Opciones (una por línea)"
+        '
         'tabRuleRef
         '
         Me.tabRuleRef.Controls.Add(Me.btnAgregarReferencia)
@@ -425,6 +571,32 @@ Partial Class FrmInicio
         Me.tabRuleRef.TabIndex = 3
         Me.tabRuleRef.Text = "Referencia a regla"
         Me.tabRuleRef.UseVisualStyleBackColor = True
+        '
+        'btnAgregarReferencia
+        '
+        Me.btnAgregarReferencia.Location = New System.Drawing.Point(33, 147)
+        Me.btnAgregarReferencia.Name = "btnAgregarReferencia"
+        Me.btnAgregarReferencia.Size = New System.Drawing.Size(123, 23)
+        Me.btnAgregarReferencia.TabIndex = 6
+        Me.btnAgregarReferencia.Text = "Añadir referencia"
+        Me.btnAgregarReferencia.UseVisualStyleBackColor = True
+        '
+        'cbxReglaReferenciada
+        '
+        Me.cbxReglaReferenciada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxReglaReferenciada.FormattingEnabled = True
+        Me.cbxReglaReferenciada.Location = New System.Drawing.Point(13, 52)
+        Me.cbxReglaReferenciada.Name = "cbxReglaReferenciada"
+        Me.cbxReglaReferenciada.Size = New System.Drawing.Size(163, 21)
+        Me.cbxReglaReferenciada.TabIndex = 1
+        '
+        'Label11
+        '
+        Me.Label11.Location = New System.Drawing.Point(10, 14)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(166, 35)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Seleccione la regla ya creada a referenciar:"
         '
         'treeResumenRegla
         '
@@ -460,178 +632,6 @@ Partial Class FrmInicio
         Me.txtIDRegla.Size = New System.Drawing.Size(348, 20)
         Me.txtIDRegla.TabIndex = 0
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(7, 14)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(124, 13)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Opciones (una por línea)"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(15, 289)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(72, 13)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Repeticiones:"
-        '
-        'txtOpcionesOneof
-        '
-        Me.txtOpcionesOneof.Location = New System.Drawing.Point(10, 30)
-        Me.txtOpcionesOneof.Multiline = True
-        Me.txtOpcionesOneof.Name = "txtOpcionesOneof"
-        Me.txtOpcionesOneof.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtOpcionesOneof.Size = New System.Drawing.Size(167, 108)
-        Me.txtOpcionesOneof.TabIndex = 1
-        '
-        'btnAgregarOneof
-        '
-        Me.btnAgregarOneof.Location = New System.Drawing.Point(33, 147)
-        Me.btnAgregarOneof.Name = "btnAgregarOneof"
-        Me.btnAgregarOneof.Size = New System.Drawing.Size(123, 23)
-        Me.btnAgregarOneof.TabIndex = 5
-        Me.btnAgregarOneof.Text = "Añadir múltiple opción"
-        Me.btnAgregarOneof.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.Location = New System.Drawing.Point(10, 14)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(166, 35)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Seleccione la regla ya creada a referenciar:"
-        '
-        'cbxReglaReferenciada
-        '
-        Me.cbxReglaReferenciada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbxReglaReferenciada.FormattingEnabled = True
-        Me.cbxReglaReferenciada.Location = New System.Drawing.Point(13, 52)
-        Me.cbxReglaReferenciada.Name = "cbxReglaReferenciada"
-        Me.cbxReglaReferenciada.Size = New System.Drawing.Size(163, 21)
-        Me.cbxReglaReferenciada.TabIndex = 1
-        '
-        'btnAgregarReferencia
-        '
-        Me.btnAgregarReferencia.Location = New System.Drawing.Point(33, 147)
-        Me.btnAgregarReferencia.Name = "btnAgregarReferencia"
-        Me.btnAgregarReferencia.Size = New System.Drawing.Size(123, 23)
-        Me.btnAgregarReferencia.TabIndex = 6
-        Me.btnAgregarReferencia.Text = "Añadir referencia"
-        Me.btnAgregarReferencia.UseVisualStyleBackColor = True
-        '
-        'btnAgregarFrase
-        '
-        Me.btnAgregarFrase.Location = New System.Drawing.Point(33, 147)
-        Me.btnAgregarFrase.Name = "btnAgregarFrase"
-        Me.btnAgregarFrase.Size = New System.Drawing.Size(123, 23)
-        Me.btnAgregarFrase.TabIndex = 6
-        Me.btnAgregarFrase.Text = "Añadir frase"
-        Me.btnAgregarFrase.UseVisualStyleBackColor = True
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.txtMaxRepeticiones)
-        Me.GroupBox3.Controls.Add(Me.Label10)
-        Me.GroupBox3.Controls.Add(Me.txtMinRepeticiones)
-        Me.GroupBox3.Controls.Add(Me.radRepeticionesPersonalizado)
-        Me.GroupBox3.Controls.Add(Me.radRepeticionesOpcional)
-        Me.GroupBox3.Controls.Add(Me.radRepeticionesUnaVez)
-        Me.GroupBox3.Location = New System.Drawing.Point(18, 277)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(190, 90)
-        Me.GroupBox3.TabIndex = 12
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Repeticiones"
-        '
-        'radRepeticionesUnaVez
-        '
-        Me.radRepeticionesUnaVez.AutoSize = True
-        Me.radRepeticionesUnaVez.Checked = True
-        Me.radRepeticionesUnaVez.Location = New System.Drawing.Point(13, 19)
-        Me.radRepeticionesUnaVez.Name = "radRepeticionesUnaVez"
-        Me.radRepeticionesUnaVez.Size = New System.Drawing.Size(65, 17)
-        Me.radRepeticionesUnaVez.TabIndex = 0
-        Me.radRepeticionesUnaVez.TabStop = True
-        Me.radRepeticionesUnaVez.Text = "Una vez"
-        Me.radRepeticionesUnaVez.UseVisualStyleBackColor = True
-        '
-        'radRepeticionesOpcional
-        '
-        Me.radRepeticionesOpcional.AutoSize = True
-        Me.radRepeticionesOpcional.Location = New System.Drawing.Point(13, 42)
-        Me.radRepeticionesOpcional.Name = "radRepeticionesOpcional"
-        Me.radRepeticionesOpcional.Size = New System.Drawing.Size(67, 17)
-        Me.radRepeticionesOpcional.TabIndex = 1
-        Me.radRepeticionesOpcional.TabStop = True
-        Me.radRepeticionesOpcional.Text = "Opcional"
-        Me.radRepeticionesOpcional.UseVisualStyleBackColor = True
-        '
-        'radRepeticionesPersonalizado
-        '
-        Me.radRepeticionesPersonalizado.AutoSize = True
-        Me.radRepeticionesPersonalizado.Location = New System.Drawing.Point(13, 65)
-        Me.radRepeticionesPersonalizado.Name = "radRepeticionesPersonalizado"
-        Me.radRepeticionesPersonalizado.Size = New System.Drawing.Size(94, 17)
-        Me.radRepeticionesPersonalizado.TabIndex = 2
-        Me.radRepeticionesPersonalizado.TabStop = True
-        Me.radRepeticionesPersonalizado.Text = "Personalizado:"
-        Me.radRepeticionesPersonalizado.UseVisualStyleBackColor = True
-        '
-        'txtMinRepeticiones
-        '
-        Me.txtMinRepeticiones.Location = New System.Drawing.Point(113, 64)
-        Me.txtMinRepeticiones.Name = "txtMinRepeticiones"
-        Me.txtMinRepeticiones.ReadOnly = True
-        Me.txtMinRepeticiones.Size = New System.Drawing.Size(29, 20)
-        Me.txtMinRepeticiones.TabIndex = 3
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(143, 67)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(10, 13)
-        Me.Label10.TabIndex = 4
-        Me.Label10.Text = "-"
-        '
-        'txtMaxRepeticiones
-        '
-        Me.txtMaxRepeticiones.Location = New System.Drawing.Point(153, 64)
-        Me.txtMaxRepeticiones.Name = "txtMaxRepeticiones"
-        Me.txtMaxRepeticiones.ReadOnly = True
-        Me.txtMaxRepeticiones.Size = New System.Drawing.Size(29, 20)
-        Me.txtMaxRepeticiones.TabIndex = 5
-        '
-        'btnModificarItemRegla
-        '
-        Me.btnModificarItemRegla.Location = New System.Drawing.Point(255, 284)
-        Me.btnModificarItemRegla.Name = "btnModificarItemRegla"
-        Me.btnModificarItemRegla.Size = New System.Drawing.Size(93, 23)
-        Me.btnModificarItemRegla.TabIndex = 13
-        Me.btnModificarItemRegla.Text = "Modificar item"
-        Me.btnModificarItemRegla.UseVisualStyleBackColor = True
-        '
-        'btnEliminarItemRegla
-        '
-        Me.btnEliminarItemRegla.Location = New System.Drawing.Point(355, 284)
-        Me.btnEliminarItemRegla.Name = "btnEliminarItemRegla"
-        Me.btnEliminarItemRegla.Size = New System.Drawing.Size(93, 23)
-        Me.btnEliminarItemRegla.TabIndex = 14
-        Me.btnEliminarItemRegla.Text = "Eliminar item"
-        Me.btnEliminarItemRegla.UseVisualStyleBackColor = True
-        '
-        'btnGuardarRegla
-        '
-        Me.btnGuardarRegla.Location = New System.Drawing.Point(355, 339)
-        Me.btnGuardarRegla.Name = "btnGuardarRegla"
-        Me.btnGuardarRegla.Size = New System.Drawing.Size(93, 23)
-        Me.btnGuardarRegla.TabIndex = 15
-        Me.btnGuardarRegla.Text = "Guardar regla"
-        Me.btnGuardarRegla.UseVisualStyleBackColor = True
-        '
         'FrmInicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -652,14 +652,14 @@ Partial Class FrmInicio
         Me.tabXML.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.TabControl2.ResumeLayout(False)
         Me.tabItem.ResumeLayout(False)
         Me.tabItem.PerformLayout()
         Me.tabOneOf.ResumeLayout(False)
         Me.tabOneOf.PerformLayout()
         Me.tabRuleRef.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
