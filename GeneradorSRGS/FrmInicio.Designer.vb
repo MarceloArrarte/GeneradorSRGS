@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmInicio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmInicio
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnOtroIdioma = New System.Windows.Forms.Button()
@@ -44,6 +44,7 @@ Partial Class FrmInicio
         Me.tabXML = New System.Windows.Forms.TabPage()
         Me.txtVistaXML = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnCrearRegla = New System.Windows.Forms.Button()
         Me.btnGuardarRegla = New System.Windows.Forms.Button()
         Me.btnEliminarItemRegla = New System.Windows.Forms.Button()
         Me.btnModificarItemRegla = New System.Windows.Forms.Button()
@@ -327,6 +328,7 @@ Partial Class FrmInicio
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.btnCrearRegla)
         Me.GroupBox2.Controls.Add(Me.btnGuardarRegla)
         Me.GroupBox2.Controls.Add(Me.btnEliminarItemRegla)
         Me.GroupBox2.Controls.Add(Me.btnModificarItemRegla)
@@ -343,6 +345,15 @@ Partial Class FrmInicio
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Nueva regla"
+        '
+        'btnCrearRegla
+        '
+        Me.btnCrearRegla.Location = New System.Drawing.Point(302, 28)
+        Me.btnCrearRegla.Name = "btnCrearRegla"
+        Me.btnCrearRegla.Size = New System.Drawing.Size(146, 23)
+        Me.btnCrearRegla.TabIndex = 16
+        Me.btnCrearRegla.Text = "Crear regla"
+        Me.btnCrearRegla.UseVisualStyleBackColor = True
         '
         'btnGuardarRegla
         '
@@ -583,6 +594,7 @@ Partial Class FrmInicio
         '
         'cbxReglaReferenciada
         '
+        Me.cbxReglaReferenciada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxReglaReferenciada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxReglaReferenciada.FormattingEnabled = True
         Me.cbxReglaReferenciada.Location = New System.Drawing.Point(13, 52)
@@ -629,7 +641,7 @@ Partial Class FrmInicio
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtIDRegla.Location = New System.Drawing.Point(100, 30)
         Me.txtIDRegla.Name = "txtIDRegla"
-        Me.txtIDRegla.Size = New System.Drawing.Size(348, 20)
+        Me.txtIDRegla.Size = New System.Drawing.Size(192, 20)
         Me.txtIDRegla.TabIndex = 0
         '
         'FrmInicio
@@ -716,4 +728,5 @@ Partial Class FrmInicio
     Friend WithEvents btnAgregarReferencia As Button
     Friend WithEvents cbxReglaReferenciada As ComboBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents btnCrearRegla As Button
 End Class
